@@ -1,0 +1,26 @@
+
+
+<div class="loading-screen-wrapper" *ngIf="loading">
+    <div class="loading-screen-icon">
+      <img src="https://i.pinimg.com/originals/26/38/57/263857aace31d99ff196d3d4ae160f89.gif" class="loadingimg" alt="">
+    </div>
+  </div>
+
+
+  
+<div class="container"  style="margin-bottom: 35px;">
+
+    
+
+  <agm-map [latitude]="clat" [longitude]="clng" (mapReady)="mapReading()" [mapTypeControl]='true'>
+    <agm-marker [animation]="userLocationMarkerAnimation" [latitude]="lat" [longitude]="lng" [iconUrl]="icon"></agm-marker>
+  </agm-map>
+
+  
+
+</div>
+
+<!-- {{lat}}
+{{lng}} -->
+
+

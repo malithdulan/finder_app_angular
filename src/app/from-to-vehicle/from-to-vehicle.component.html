@@ -1,0 +1,35 @@
+
+
+
+<div class="container" style="margin-bottom: 35px;">
+ 
+  
+ 
+  <div class="form-group">
+    <label style="color: white;">Enter address</label>
+    <input id="addressSearch" [value]="daddress" type="text"  class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+  </div>
+ 
+  <!-- <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+      (dragEnd)="markerDragEnd($event)"></agm-marker>
+  </agm-map> -->
+ 
+  <!-- <h5>Address: {{address}}</h5>
+  <div>Latitude: {{latitude}}</div>
+  <div>Longitude: {{longitude}}</div> -->
+  
+
+  <agm-map [latitude]="olat" [longitude]="olng"  [mapTypeControl]='true'>
+    <agm-direction  [origin]="origin" [destination]="destination" [renderOptions]="renderOptions" [markerOptions]="markerOptions" (originDrag)="markerDragEnd($event)">
+    </agm-direction>
+  </agm-map>
+
+  <div class="details" style="width:100%;text-align: center;">
+    <h4 style="color: white;text-decoration: underline;">Location Of The Security System</h4>
+    <h5  style="color: white;">Address: {{address}}</h5>
+    <div class="lat-text" style="color: white;">Latitude: {{dlat}}</div>
+    <div class="lan-text" style="color: white;">Longitude: {{dlng}}</div>
+  </div>
+</div>
+

@@ -1,0 +1,63 @@
+
+
+
+<div class="second-nav">
+    <ul>
+      <li>
+        <a [routerLink]="['/VehicleLocation']" routerLinkActive="active" >
+          <div class="icon">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+    
+          </div>
+          <div class="name"><span data-text="Location">Location</span></div>
+        </a>
+      </li>
+      <li>
+          <a [routerLink]="['/CurrentToVehicle']" routerLinkActive="active">
+            <div class="icon">
+              <i class="fa fa-compass" aria-hidden="true"></i>
+              <i class="fa fa-compass" aria-hidden="true"></i>
+    
+            </div>
+            <div class="name"><span data-text="Directions">Directions</span></div>
+          </a>
+        </li>
+        <li>
+            <a [routerLink]="['/FromToVehicle']" routerLinkActive="active">
+              <div class="icon">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-search" aria-hidden="true"></i>
+    
+              </div>
+              <div class="name"><span data-text="Location List">Location List</span></div>
+            </a>
+          </li>
+    </ul>
+    </div>
+
+    <div class="sensor-container">
+        <h6>Speed: <span>{{speed}} Kmph</span></h6>
+        <div *ngIf="sensor1 == 0">
+            <h6>Side Mirror Left: <span class="sensor-ok">Good</span></h6>
+        </div>
+
+        <div class="fa-beat">
+        <div *ngIf="sensor1 == 1">
+            <h6>Side Mirror Left: <span class="sensor-no">Alert!</span></h6>
+        </div>
+      </div>
+
+        <div *ngIf="sensor2 == 0">
+            <h6>Side Mirror Right: <span class="sensor-ok">Good</span></h6>
+        </div>
+
+        <div class="fa-beat">
+        <div *ngIf="sensor2 == 1">
+            <h6>Side Mirror Right: <span class="sensor-no">Alert!</span></h6>
+        </div>
+      </div>
+
+    </div>
+
+    
